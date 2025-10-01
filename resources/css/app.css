@@ -1,13 +1,48 @@
 @import 'tailwindcss';
 
-/*@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views!*.blade.php';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views!*.blade.php';
 @source '../../storage/framework/views!*.php';
 @source '..!**!*.blade.php';
-@source '..!**!*.js';*/
+@source '..!**!*.js';
 
 @theme {
-    --color-*: initial;
-    --color-white: #FFF;
+    --breakpoint-xs: 375px;
+    --breakpoint-sm: 540px;
+    --breakpoint-md: 720px;
+    --breakpoint-lg: 960px;
+    --breakpoint-xl: 1140px;
+    --breakpoint-2xl: 1550px;
+
+    --container-center: true;
+    --container-padding: 20px;
+
+    --font-sans: "Gilroy", sans-serif;
+
+    --text-xxs: 14px;
+    --leading-xxs: 1.6em;
+
+    --text-xs: 16px;
+    --leading-xs: 1.6em;
+
+    --text-sm: 18px;
+    --leading-sm: 1.6em;
+
+    --text-md: 20px;
+    --leading-md: 1.45em;
+
+    --text-lg: 26px;
+    --leading-lg: 1.3em;
+
+    --text-xl: 36px;
+    --leading-xl: 1.3em;
+
+    --text-2xl: 64px;
+    --leading-2xl: 1.1em;
+
+    --text-3xl: 96px;
+    --leading-3xl: 1.1em;
+
+    --color-white: #fff;
     --color-purple: #7843E9;
     --color-pink: #EC4176;
     --color-dark: #222;
@@ -15,19 +50,4 @@
     --color-darkblue: #1E1F43;
     --color-body: #BDBECA;
     --color-card: #323359;
-}
-
-@theme {
-    --text-xxs: 14px;
-    --text-xs: 16px;
-    --text-sm: 18px;
-    --text-md: 20px;
-    --text-lg: 26px;
-    --text-xl: 36px;
-    --text-2xl: 64px;
-    --text-3xl: 96px;
-}
-
-@theme {
-    --font-sans: 'Gilroy', sans-serif;
 }
