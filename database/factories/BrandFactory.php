@@ -19,7 +19,7 @@ class BrandFactory extends Factory
     {
         return [
             'title' => $this->faker->company(),
-            'thumbnail' => '',
+            'thumbnail' => $this->faker->fixturesImages('brands', 'images/brands'),
         ];
     }
 }

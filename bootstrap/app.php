@@ -1,5 +1,7 @@
 <?php
 
+use App\Faker\FakerImageProvider;
+use Faker\Factory;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -19,6 +21,13 @@ return Application::configure(basePath: dirname(__DIR__))
             'throttle:api',
         ]);
     })
+    ->withSingletons([
+        \Faker\Generator::class => function () {
+            $faker = Factory::create();
+            $faker->addProvider(new FakerImageProvider($faker));
+            return $faker;
+        },
+    ])
     ->withExceptions(function (Exceptions $exceptions): void {
         //
     })->create();
