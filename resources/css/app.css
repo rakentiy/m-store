@@ -1,3 +1,33 @@
 @import 'tailwindcss';
-@import 'tailwindcss/preflight';
-@tailwind utilities;
+
+/*@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views!*.blade.php';
+@source '../../storage/framework/views!*.php';
+@source '..!**!*.blade.php';
+@source '..!**!*.js';*/
+
+@theme {
+    --color-*: initial;
+    --color-white: #FFF;
+    --color-purple: #7843E9;
+    --color-pink: #EC4176;
+    --color-dark: #222;
+    --color-gray: #454545;
+    --color-darkblue: #1E1F43;
+    --color-body: #BDBECA;
+    --color-card: #323359;
+}
+
+@theme {
+    --text-xxs: 14px;
+    --text-xs: 16px;
+    --text-sm: 18px;
+    --text-md: 20px;
+    --text-lg: 26px;
+    --text-xl: 36px;
+    --text-2xl: 64px;
+    --text-3xl: 96px;
+}
+
+@theme {
+    --font-sans: 'Gilroy', sans-serif;
+}
