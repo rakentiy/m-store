@@ -1,16 +1,19 @@
 <?php
 
-use App\Faker\FakerImageProvider;
 use Faker\Factory;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Support\Faker\FakerImageProvider;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
-        web: __DIR__ . '/../routes/web.php',
+//        using: function () {
+//            (new RouteServiceProvider(app()))->boot();
+//        },
         commands: __DIR__ . '/../routes/console.php',
         health: '/up',
+
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->appendToGroup('web', [
@@ -29,5 +32,8 @@ return Application::configure(basePath: dirname(__DIR__))
         },
     ])
     ->withExceptions(function (Exceptions $exceptions): void {
-        //
+        $exceptions->renderable(function (DomainException $e) {
+            flash()->alert($e->getMessage());
+            return back();
+        });
     })->create();

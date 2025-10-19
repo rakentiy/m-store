@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Support\Flash;
+namespace Support\Flash;
 
 use Illuminate\Contracts\Session\Session;
 

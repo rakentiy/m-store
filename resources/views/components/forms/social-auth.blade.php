@@ -1,6 +1,6 @@
 <ul class="space-y-3 my-2">
     <li>
-        <a href="{{ route('socialite.github') }}"
+        <a href="{{ route('socialite', ['driver' => 'github']) }}"
            class="relative flex items-center h-14 px-12 rounded-lg border border-[#A07BF0] bg-white/20 hover:bg-white/20 active:bg-white/10 active:translate-y-0.5">
             <svg
                 class="shrink-0 absolute left-4 w-5 sm:w-6 h-5 sm:h-6"

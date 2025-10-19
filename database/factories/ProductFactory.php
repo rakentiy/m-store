@@ -4,10 +4,13 @@ namespace Database\Factories;
 
 use App\Models\Brand;
 use App\Models\Product;
+use Faker\Generator;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Support\Faker\FakerImageProvider;
 
 /**
  * @extends Factory<Product>
+ * @property Generator&FakerImageProvider $faker
  */
 class ProductFactory extends Factory
 {

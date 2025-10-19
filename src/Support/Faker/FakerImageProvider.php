@@ -2,17 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Faker;
+namespace Support\Faker;
 
 use Faker\Provider\Base;
 use Illuminate\Support\Facades\Storage;
-use League\Flysystem\FilesystemException;
 
 final class FakerImageProvider extends Base
 {
-    /**
-     * @throws FilesystemException
-     */
     public function fixturesImages(
         string $fixturesDirectory,
         string $storageDirectory,

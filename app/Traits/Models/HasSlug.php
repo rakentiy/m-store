@@ -11,6 +11,7 @@ trait HasSlug
     protected static function bootHasSlug(): void
     {
         static::creating(function (Model $item) {
+            /** @var Model&HasSlug $item */
             $item->makeSlug();
         });
     }
